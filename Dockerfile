@@ -1,6 +1,6 @@
-FROM python:3.11-slim
+FROM python:3.13-alpine
 
-
+RUN python -m pip install --upgrade pip
 RUN pip install devpi-server
 
 RUN mkdir -p /data

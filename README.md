@@ -1,8 +1,12 @@
 # devpi-server
 
-docker.exe build -t devpiserver:1.0 .
-docker tag devpiserver:1.0 devpiserver:latest
-docker tag devpiserver:1.0 lordraw/devpiserver:1.0
+docker build -t devpiserver:2.0 .
+docker tag devpiserver:2.0 devpiserver:latest
+docker tag devpiserver:2.0 devpiserver:2.0v3.13-alpine
+
+docker tag devpiserver:2.0 lordraw/devpiserver:2.0
 docker tag devpiserver:latest lordraw/devpiserver:latest
-docker push lordraw/devpiserver:1.0
+docker tag devpiserver:2.0v3.13-alpine lordraw/devpiserver:2.0v3.13-alpine
+docker push lordraw/devpiserver:2.0
+docker push lordraw/devpiserver:2.0v3.13-alpine
 docker push lordraw/devpiserver:latest
